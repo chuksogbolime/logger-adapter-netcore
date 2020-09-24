@@ -7,7 +7,7 @@ Package Manager: Install-Package NetCoreLoggerAdapter -Version 1.0.0
 
 DotNet CLI: dotnet add package NetCoreLoggerAdapter --version 1.0.0
 
-Package reference : <PackageReference Include="NetCoreLoggerAdapter" Version="1.0.0" />
+Package reference :  PackageReference Include="NetCoreLoggerAdapter" Version="1.0.0" 
 
 Paket CLI: paket add NetCoreLoggerAdapter --version 1.0.0
 
