@@ -20,26 +20,26 @@ Paket CLI: paket add NetCoreLoggerAdapter --version 1.0.0
     //where services is of type IServiceCollection
 		
 2. Class usage
-		
-		public class LogUsecase
-		{
-			readonly ILoggerServiceAdapter<LogUsecase> _logger;
-			public LogUsecase(ILoggerServiceAdapter<LogUsecase> logger)
+
+			public class LogUsecase
 			{
-        _logger=logger;
+				readonly ILoggerServiceAdapter<LogUsecase> _logger;
+				public LogUsecase(ILoggerServiceAdapter<LogUsecase> logger)
+				{
+					_logger=logger;
+				}
+				public void Testmethod()
+				{
+					try
+					{
+						_logger.LogInformation("information");
+					}
+					catch(Exception ex)
+					{
+					  _logger.LogError(ex,"Error message");
+					}
+				}
 			}
-			public void Testmethod()
-			{
-				try
-        {
-          _logger.LogInformation("information");
-        }
-        catch(Exception ex)
-        {
-          _logger.LogError(ex,"Error message");
-        }
-			}
-		}
     
  3 In Test project
  
